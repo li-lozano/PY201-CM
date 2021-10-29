@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+
+{% block header %}
+<h1 class="title-content">{% block title %} Nuevo contacto {% endblock %}</h1>
+{% endblock %}
+{% block action %}
+<a href="{{ url_for('contact.home')}}" class="button">Volver</a>
+{% endblock %}
+{% block content %}
+<div class="contact-from">
+    <form method="POST">
+        <div class="contatc-input"><input type="text" name="company" placeholder="Nombre empresa"></div>
+        <div class="contatc-input"><input type="text" name="role" placeholder="Rol en la empresa"></div>
+        <div class="contatc-input"><input type="text" name="firstname"placeholder="Nombre"></div>
+        <div class="contatc-input"><input type="text" name="lastname" placeholder="Apellido"></div>
+        <div class="contatc-input"><input type="text" name="mail" placeholder="Correo"></div>
+        <div class="contatc-input"><input type="text" name="phone" placeholder="Telefono"></div>
+        <div class="contatc-input"><button>Enviar</button></div>
+    </form>
+</div>
+{% endblock %}

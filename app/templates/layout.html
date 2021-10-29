@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} - Contact Manager </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+<div class="layout">
+    <div class="sidebar">
+        <div class="logo">
+            <img id="logosvg" src="{{ url_for('static', filename='img/logo.svg')}}" alt="">
+            <div id="text-logo">Contact<b></b>Manager</b></div>
+        </div>
+        <div class="nav-lef">
+        </div>
+    </div>
+    <div class="content">
+        <div class="top-bar">
+            <div id="search">
+                <form action="">
+                    <input id="search-bar" type="text" placeholder="buscar">
+                </form>
+            </div>
+            <div class="action">
+                {% block action %}{% endblock %}
+            </div>            
+        </div>
+        <div class="msg-flash">
+            {% for message in get_flashed_messages() %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+        </div>
+            {% block header %}{% endblock %}
+        <div class="content-data">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</div>
+
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+
+{% block header %}
+<h1 class="title-content" >{% block title %} Contactos {% endblock %}</h1>
+{% endblock %}
+{% block action %}
+<a href="{{ url_for('contact.create')}}" class="button">Nuevo</a>
+{% endblock %}
+{% block content %}
+{% for contact in contacts %}
+<div class="contact-card">
+    <div>{{ contact['firstname'] }} {{ contact['lastname'] }}</div>
+    <div>{{ contact['role'] }}</div>
+    <div>{{ contact['company'] }}</div>
+    <div>{{ contact['mail'] }}</div>
+    <div>{{ contact['phone'] }}</div>
+    <div><a href="">Editar</a> | <a href="">Borrar</a></div>
+</div>
+{% endfor %}
+{% endblock %}
