@@ -2,7 +2,7 @@
 
 
 {% block header %}
-<h1 class="title-content">{% block title %} Nuevo contacto {% endblock %}</h1>
+<h1 class="title-content">{% block title %} Actualizar contacto {% endblock %}</h1>
 {% endblock %}
 {% block action %}
 <a href="{{ url_for('contact.home')}}" class="button">Volver</a>
@@ -12,27 +12,27 @@
     <form method="POST">
         <div class="contatc-input">
             <label for="conpany">Nombre de la empresa:</label>
-            <input type="text" name="company" placeholder="Nombre empresa">            
+            <input type="text" name="company" value="{{ contact['company'] }}" >            
         </div>
         <div class="contatc-input">
             <label for="conpany">Rol en la empresa:</label>
-            <input type="text" name="role" placeholder="Rol en la empresa">
+            <input type="text" name="role" value="{{ contact['role'] }}" >
         </div>
         <div class="contatc-input">
             <label for="conpany">Nombre:</label>
-            <input type="text" name="firstname"placeholder="Nombre">
+            <input type="text" name="firstname" value="{{ contact['firstname'] }}">
         </div>
         <div class="contatc-input">
             <label for="conpany">Apellidos:</label>
-            <input type="text" name="lastname" placeholder="Apellido">
+            <input type="text" name="lastname" value="{{ contact['lastname'] }}" >
         </div>
         <div class="contatc-input">
             <label for="conpany">Correo:</label>
-            <input type="text" name="mail" placeholder="Correo">
+            <input type="text" name="mail" value="{{ contact['mail'] }}">
         </div>
         <div class="contatc-input">
             <label for="conpany">Numero de contacto:</label>
-            <input type="text" name="phone" placeholder="Telefono">
+            <input type="text" name="phone" value="{{ contact['phone'] }}" >
         </div>
         <div class="contatc-input">
             <button class="button">Enviar</button>

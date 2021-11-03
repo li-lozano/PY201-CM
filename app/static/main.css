@@ -45,6 +45,7 @@ body {
 }
 
 input {
+	margin-top: 5px;
 	padding-left: 15px;
 	border-radius: 10px;
 	font-size: 14px;
@@ -95,6 +96,10 @@ input {
 
 .contact-from {
 	width: 60%;
+}
+
+label {
+	padding-left: 10px;
 }
 
 .contatc-input {		
