@@ -12,9 +12,9 @@ body {
 	padding: 10px;
 }
 
-.content {	
+.layout {	
 	margin-left: 13.5%;
-	margin-right: 1%;
+	margin-right: 0.5%;
 	padding: 10px;
 }
 
@@ -46,9 +46,10 @@ body {
 
 input {
 	padding-left: 15px;
-	border-radius: 15px;
+	border-radius: 10px;
 	font-size: 14px;
 	height: 30px;
+	width: 100%;
 }
 
 #search {
@@ -67,29 +68,34 @@ input {
 .button {
     font-size: 14px;
     transition: background-color 0.5s ease;
-    background-color: #674dd4;
+    background-color: navy;
     color: #fff;
     align-self: center;
     padding: 8px 15px;
-    border-radius: 30px;
+    border-radius: 10px;
     text-decoration: none;
     border: none;
 }
 
 .button:hover {
-    background-color: #7b62e3;
+    background-color: #674dd4;
+}
+
+.content {
+	min-width: 300px;
+	margin-left: 20px;
+	margin-right: 1%;
+	padding-right: 10px;
+	
 }
 
 .content-data {
-	margin-left: 20px;
-	width: 100%;
-	display: flex;
-    
+	width: 100%;	
 }
-/* .contact-from {
-	
-	
-} */
+
+.contact-from {
+	width: 60%;
+}
 
 .contatc-input {		
 	margin-top: 20px;
@@ -101,4 +107,43 @@ input {
 	margin-right: 20px;
 	padding: 10px;
 	width: 300px;
+	min-width: 300px;
 	border-radius: 5px;
+	float: left;
+	display: block;
+	
+}
+
+.card-name {
+	font-size:large;
+	font-weight: 600;
+	color: navy;
+}
+
+.card-contact {
+	font-size: smaller;
+	font-weight: 400;
+}
+
+.card-options {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+.button-card {
+	font-size:small;
+	transition: background-color 0.5s ease;
+    background-color: navy;
+    color: #fff;
+    align-self: center;
+    padding: 8px 15px;
+	margin-left: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: none;
+}
+
+.button-card:hover {
+    background-color: #674dd4;
+}

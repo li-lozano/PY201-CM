@@ -46,3 +46,16 @@ def create():
                 for error in errors:
                     flash(error)
     return render_template('contacts/create.html')
+
+@bp.route('<int:id>/update', methods=['GET', 'POST'])
+def update(id):
+    return 'actualizar'
+
+@bp.route('/delete/<int:id>', methods=['GET', 'POST'])
+def delete(id):
+        db, c = get_db()
+        c.execute(
+            'DELETE FROM contacts WHERE id = %s', (id,)
+        )
+        db.commit()
+        return redirect(url_for('contact.home'))

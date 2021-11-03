@@ -9,13 +9,18 @@
 {% endblock %}
 {% block content %}
 {% for contact in contacts %}
-<div class="contact-card">
-    <div>{{ contact['firstname'] }} {{ contact['lastname'] }}</div>
-    <div>{{ contact['role'] }}</div>
-    <div>{{ contact['company'] }}</div>
-    <div>{{ contact['mail'] }}</div>
-    <div>{{ contact['phone'] }}</div>
-    <div><a href="">Editar</a> | <a href="">Borrar</a></div>
+<div class="content-data">
+    <div class="contact-card">
+        <div class="card-name">{{ contact['firstname'] }} {{ contact['lastname'] }}</div>
+        <div class="card-contact">{{ contact['role'] }}</div>
+        <div class="card-contact">{{ contact['company'] }}</div>
+        <div class="card-contact">{{ contact['mail'] }}</div>
+        <div class="card-contact">{{ contact['phone'] }}</div>
+        <div class="card-options">
+            <a class="button-card" href="{{ url_for('contact.update', id=contact['id']) }}"">Editar</a>
+            <a class="button-card" href="{{ url_for('contact.delete', id=contact['id']) }}">Borrar</a>
+        </div>
+    </div>
 </div>
 {% endfor %}
 {% endblock %}

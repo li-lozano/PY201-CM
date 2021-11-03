@@ -12,7 +12,7 @@
     
 </head>
 <body>
-<div class="layout">
+<div class="main">
     <div class="sidebar">
         <div class="logo">
             <img id="logosvg" src="{{ url_for('static', filename='img/logo.svg')}}" alt="">
@@ -21,11 +21,12 @@
         <div class="nav-lef">
         </div>
     </div>
-    <div class="content">
+    <div class="layout">
         <div class="top-bar">
             <div id="search">
                 <form action="">
                     <input id="search-bar" type="text" placeholder="buscar">
+                    <button class="button">IR</button>
                 </form>
             </div>
             <div class="action">
@@ -38,7 +39,7 @@
             {% endfor %}
         </div>
             {% block header %}{% endblock %}
-        <div class="content-data">
+        <div class="content">
             {% block content %}{% endblock %}
         </div>
     </div>
