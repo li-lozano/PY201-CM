@@ -6,8 +6,12 @@ bp = Blueprint('contact',__name__, url_prefix='/')
 
 @bp.route('/', methods=['GET'])
 def home():
+    search = request.args.get('search')
     db, c = get_db()
-    c.execute('SELECT * FROM contacts')
+    if search is None:
+        c.execute('SELECT * FROM contacts')
+    else:
+        c.execute('SELECT * FROM contacts WHERE firstname like %s', ('%' + search + '%',))        
     contacts = c.fetchall()
     return render_template('contacts/home.html', contacts = contacts)
 
