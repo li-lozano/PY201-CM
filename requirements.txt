@@ -9,9 +9,8 @@
 click==8.0.3; python_version >= '3.6'
 flask==2.0.2
 itsdangerous==2.0.1; python_version >= '3.6'
-jinja2==3.0.2; python_version >= '3.6'
+jinja2==3.0.3; python_version >= '3.6'
 markupsafe==2.0.1; python_version >= '3.6'
 mysql-connector-python==8.0.27
-protobuf==3.19.0; python_version >= '3.5'
-python-dotenv==0.19.1
+protobuf==3.19.1; python_version >= '3.5'
 werkzeug==2.0.2; python_version >= '3.6'
