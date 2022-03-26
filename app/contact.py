@@ -11,7 +11,7 @@ def home():
     if search is None:
         c.execute('SELECT * FROM contacts')
     else:
-        c.execute('SELECT * FROM contacts WHERE firstname like %s', ('%' + search + '%',))        
+        c.execute('SELECT * FROM contacts WHERE CONCAT(firstname, lastname) LIKE %s', ('%' + search + '%',))        
     contacts = c.fetchall()
     return render_template('contacts/home.html', contacts = contacts)
 
